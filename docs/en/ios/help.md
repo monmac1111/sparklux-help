@@ -67,17 +67,22 @@ Tap ✨ to open the picture settings.
 | No conversion | Shows the source as it is |
 | A/B compare | Left: current preset, right: no conversion. Drag the divider |
 | Upscale to screen resolution | When the video is smaller than the screen, scales it to the screen's native resolution |
-| Frame interpolation | Smooths motion (videos up to 30 fps). On by default (you can turn it off in the quality settings). When active, "Smooth ×2" appears on screen. If unavailable, the reason is shown |
+| Frame interpolation | Smooths motion. On by default (you can turn it off in the quality settings). When active, the output frame rate appears on screen, e.g. "Smooth 120fps". If unavailable, the reason is shown |
+| Interpolation priority | Choose Resolution priority (default), Smooth priority or Ultra smooth priority (see below) |
 | Audio & subtitles | Choose the audio track and subtitles |
-| Now | Headroom (how many times brighter than normal white, e.g. ×8.0), source resolution and output resolution |
+| Now | Headroom (how many times brighter than normal white, e.g. ×8.0), source resolution, output resolution and screen refresh (Hz) |
 
-**Which videos can use frame interpolation**
+**Interpolation priority**
 
-- **720p or smaller, 8-bit**: a lightweight method, works on every supported device
-- **1080p, 10-bit**: the app first measures the speed on your device. On iPhone 17 Pro Max it works **up to 1080p at 24 fps**
-- **Over 30 fps, or 1440p and larger**: not available (1080p at 30 fps is also too slow). The reason is shown
+The app always outputs the highest frame rate it can keep up with for that video and mode. The output is 120, 60, 40, 30 or 24 fps (values that stay evenly spaced on a 120 Hz screen), and never lower than the video's own frame rate.
 
-When the device gets hot or Low Power Mode is on, frame interpolation and super resolution pause automatically (the app tells you so). Colour conversion never pauses.
+| Mode | Interpolation resolution | Typical on iPhone 17 Pro Max |
+|---|---|---|
+| Resolution priority (default) | The video's own resolution (never scaled down) | 120 fps up to 720p, 60 fps at 1080p. 1440p and 4K are not interpolated |
+| Smooth priority | Up to 1080p (larger videos are scaled down) | 4K and 1440p at 60 fps |
+| Ultra smooth priority | 720p | 120 fps. 10-bit HDR videos are interpolated in 8-bit (gradients may band slightly) |
+
+When the device gets hot or can't keep up, the app first lowers the frame rate one step (120→60→40), then (in Smooth and Ultra smooth priority) the interpolation resolution, and finally turns interpolation off. In Low Power Mode, interpolation and super resolution pause (the app tells you so). Colour conversion never pauses.
 
 ## Free trial and purchase
 
