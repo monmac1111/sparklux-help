@@ -1,5 +1,5 @@
 site_name: Sparklux
-site_description: SDR の映像を、実時間で HDR に。macOS 用の動画プレイヤー
+site_description: SDR の映像を、実時間で HDR に。Mac と iPhone / iPad の動画プレイヤー
 site_url: https://monmac1111.github.io/sparklux-help/
 repo_url: https://github.com/monmac1111/sparklux-help
 theme:
@@ -20,9 +20,13 @@ theme:
 nav:
   - Sparklux: index.md
   - 日本語:
-      - ヘルプ: ja/help.md
-      - プライバシーポリシー: ja/privacy.md
+      - ヘルプ（Mac）: ja/help.md
+      - プライバシーポリシー（Mac）: ja/privacy.md
+      - ヘルプ（iPhone / iPad）: ja/ios/help.md
+      - プライバシーポリシー（iPhone / iPad）: ja/ios/privacy.md
   - English:
-      - Help: en/help.md
-      - Privacy Policy: en/privacy.md
+      - Help (Mac): en/help.md
+      - Privacy Policy (Mac): en/privacy.md
+      - Help (iPhone / iPad): en/ios/help.md
+      - Privacy Policy (iPhone / iPad): en/ios/privacy.md
 markdown_extensions: [admonition, tables, attr_list]

@@ -1,0 +1,83 @@
+# Help (iPhone / iPad)
+
+**SDR video, at HDR brightness.** Browse the folders on your Mac or NAS and play videos directly.
+
+## Requirements
+
+- iOS / iPadOS 26 or later
+- **An HDR-capable screen** (iPhone 12 or later, iPad Pro, etc.). Videos still play on other screens, but SDR-to-HDR conversion does not run (the app tells you so)
+
+## Open a shared folder on your Mac
+
+1. **On the Mac**: System Settings › General › Sharing › turn on **File Sharing** and add the folders you want to share
+2. **In the app**: tap your Mac under **Network** (if it does not appear, use **Add Server** and type its host name or IP address)
+3. Enter your Mac user name and password, then **Connect**
+
+!!! note "If you are asked about Local Network the first time"
+    Tap **Allow**. The first attempt right after allowing may fail once — just tap **Connect** again.
+    If you declined, turn on Sparklux in Settings › Privacy & Security › Local Network.
+
+NAS devices (Synology, QNAP, etc.) work over SMB too. **Shares that require SMB3 encryption are not supported yet.**
+
+## Other ways to open videos
+
+| Source | How |
+|---|---|
+| A folder in the Files app | **Add Folder** — browse it again next time |
+| A single file | **Open File** |
+| Photos | **Choose from Photos** (HDR recordings stay as they are) |
+| URL | **Open URL** — direct links to video files (.mp4 / .mov / .m3u8) |
+
+!!! warning "Streaming services such as YouTube cannot be opened"
+    Their video pages are not video files, so they cannot be played.
+
+## Supported formats
+
+MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit, HDR10, HLG and Dolby Vision 8.1).
+
+- For MKV, only the default audio track plays. MKV embedded subtitles are planned for a future update
+- Dolby Vision Profile 5 cannot be shown in correct colours (the app tells you so)
+
+## Controls while playing
+
+| Gesture | Action |
+|---|---|
+| Tap anywhere | Play / pause |
+| Double-tap the left side | Back 10 seconds (keep tapping for 20, 30…) |
+| Double-tap the right side | Forward 10 seconds |
+| ✨ (Picture) | Preset, A/B compare, upscaling, frame interpolation, audio & subtitles |
+
+## Picture settings
+
+| Setting | What it does |
+|---|---|
+| **Natural** (default) | Natural brightness. Hard to break |
+| Vivid | Keeps colour strong in bright areas |
+| Brighter, as is | Same contrast, lifted to the screen's full brightness |
+| No conversion | Shows the source as it is |
+| A/B compare | Left: current preset, right: no conversion. Drag the divider |
+| Upscale to screen resolution | When the video is smaller than the screen, scales it to the screen's native resolution |
+| Frame interpolation | Smooths videos up to 30 fps, 1280×720 and 8-bit. If unavailable, the reason is shown |
+
+When the device gets hot or Low Power Mode is on, frame interpolation and super resolution pause automatically (the app tells you so). Colour conversion never pauses.
+
+## Free trial and purchase
+
+- On first launch you will see the **3-day** free trial. Tap **Start Free Trial** to begin
+- When the trial ends, **playback stops** (you can still browse folders)
+- To keep using the app, make a one-time purchase. **You are never charged automatically**
+- After changing devices or reinstalling, tap **Restore Purchase**
+
+## Troubleshooting
+
+| Symptom | What to check |
+|---|---|
+| The server does not appear | Mac and iPhone on the same Wi-Fi? File Sharing on? Use **Add Server** with the host name (e.g. `name.local`) or IP address |
+| "Loading… the disk may be spinning up" | An external HDD can take a few seconds to spin up |
+| Playback stopped and **Try Again** appeared | The connection dropped. **Try Again** reopens from the same position |
+| "This video needs more than the network provides…" | The video's data rate exceeds your Wi-Fi speed. Move closer to the router, or serve from a wired Mac |
+| The picture does not get brighter | At maximum brightness some devices leave no HDR headroom. Lower it slightly |
+
+## Contact
+
+<hello@monneural.dev>
