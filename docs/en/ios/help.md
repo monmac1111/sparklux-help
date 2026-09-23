@@ -40,14 +40,24 @@ MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit,
 
 ## Controls while playing
 
+The screen is split into left, middle and right thirds. What happens depends on where you tap.
+
+![Screen controls: left, middle and right thirds, and swipe down](../../assets/ios-gestures-en.svg)
+
 | Gesture | Action |
 |---|---|
-| Tap anywhere | Play / pause |
-| Double-tap the left side | Back 10 seconds (keep tapping for 20, 30…) |
-| Double-tap the right side | Forward 10 seconds |
-| ✨ (Picture) | Preset, A/B compare, upscaling, frame interpolation, audio & subtitles |
+| Tap the middle | Play / pause. While paused, the controls stay on screen |
+| Tap the left or right | Show / hide the controls |
+| Double-tap the left | Back 10 seconds (keep tapping for 20, 30…) |
+| Double-tap the right | Forward 10 seconds (keep tapping for 20, 30…) |
+| Touch and hold (anywhere) | 2× speed while you hold. Back to normal when you let go (while playing) |
+| Swipe down | Closes the player. Pull about a fifth of the screen, or flick quickly. If not far enough, it springs back (does not start on the controls or near the A/B divider) |
+
+The **controls** have a seek bar, back / forward 10 seconds, play / pause, ✨ (Picture) and × (close).
 
 ## Picture settings
+
+Tap ✨ to open the picture settings.
 
 | Setting | What it does |
 |---|---|
@@ -57,7 +67,15 @@ MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit,
 | No conversion | Shows the source as it is |
 | A/B compare | Left: current preset, right: no conversion. Drag the divider |
 | Upscale to screen resolution | When the video is smaller than the screen, scales it to the screen's native resolution |
-| Frame interpolation | Smooths videos up to 30 fps, 1280×720 and 8-bit. If unavailable, the reason is shown |
+| Frame interpolation | Smooths motion (videos up to 30 fps). When active, "Smooth ×2" appears on screen. If unavailable, the reason is shown |
+| Audio & subtitles | Choose the audio track and subtitles |
+| Now | Headroom (how many times brighter than normal white, e.g. ×8.0), source resolution and output resolution |
+
+**Which videos can use frame interpolation**
+
+- **720p or smaller, 8-bit**: a lightweight method, works on every supported device
+- **1080p, 10-bit**: the app first measures the speed on your device. On iPhone 17 Pro Max it works **up to 1080p at 24 fps**
+- **Over 30 fps, or 1440p and larger**: not available (1080p at 30 fps is also too slow). The reason is shown
 
 When the device gets hot or Low Power Mode is on, frame interpolation and super resolution pause automatically (the app tells you so). Colour conversion never pauses.
 
