@@ -67,7 +67,7 @@ Tap ✨ to open the picture settings.
 | No conversion | Shows the source as it is |
 | A/B compare | Left: current preset, right: no conversion. Drag the divider |
 | Upscale to screen resolution | When the video is smaller than the screen, scales it to the screen's native resolution |
-| Frame interpolation | Smooths motion (videos up to 30 fps). When active, "Smooth ×2" appears on screen. If unavailable, the reason is shown |
+| Frame interpolation | Smooths motion (videos up to 30 fps). On by default (you can turn it off in the quality settings). When active, "Smooth ×2" appears on screen. If unavailable, the reason is shown |
 | Audio & subtitles | Choose the audio track and subtitles |
 | Now | Headroom (how many times brighter than normal white, e.g. ×8.0), source resolution and output resolution |
 
