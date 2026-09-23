@@ -22,11 +22,11 @@ nav:
   - 日本語:
       - ヘルプ（Mac）: ja/help.md
       - プライバシーポリシー（Mac）: ja/privacy.md
-      - ヘルプ（iPhone / iPad）: ja/ios/help.md
-      - プライバシーポリシー（iPhone / iPad）: ja/ios/privacy.md
+      - ヘルプ（Sparklux Go）: ja/ios/help.md
+      - プライバシーポリシー（Sparklux Go）: ja/ios/privacy.md
   - English:
       - Help (Mac): en/help.md
       - Privacy Policy (Mac): en/privacy.md
-      - Help (iPhone / iPad): en/ios/help.md
-      - Privacy Policy (iPhone / iPad): en/ios/privacy.md
+      - Help (Sparklux Go): en/ios/help.md
+      - Privacy Policy (Sparklux Go): en/ios/privacy.md
 markdown_extensions: [admonition, tables, attr_list]

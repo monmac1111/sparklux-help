@@ -1,8 +1,8 @@
-# Privacy Policy (iPhone / iPad)
+# Privacy Policy — Sparklux Go (iPhone / iPad)
 
 **Last updated: 2026-09-23**
 
-This policy describes how Sparklux for iPhone / iPad ("the app") handles information.
+This policy describes how Sparklux Go for iPhone / iPad ("the app") handles information.
 
 ## 1. Information we do not collect
 

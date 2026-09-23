@@ -1,8 +1,8 @@
-# プライバシーポリシー（iPhone / iPad 版）
+# プライバシーポリシー — Sparklux Go（iPhone / iPad）
 
 **最終更新: 2026-09-23**
 
-Sparklux for iPhone / iPad（以下「本アプリ」）における情報の取り扱いについて定めます。
+Sparklux Go（iPhone / iPad 版・以下「本アプリ」）における情報の取り扱いについて定めます。
 
 ## 1. 収集しない情報
 

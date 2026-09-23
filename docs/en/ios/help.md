@@ -1,4 +1,4 @@
-# Help (iPhone / iPad)
+# Help — Sparklux Go (iPhone / iPad)
 
 **SDR video, at HDR brightness.** Browse the folders on your Mac or NAS and play videos directly.
 
@@ -15,7 +15,7 @@
 
 !!! note "If you are asked about Local Network the first time"
     Tap **Allow**. The first attempt right after allowing may fail once — just tap **Connect** again.
-    If you declined, turn on Sparklux in Settings › Privacy & Security › Local Network.
+    If you declined, turn on Sparklux Go in Settings › Privacy & Security › Local Network.
 
 NAS devices (Synology, QNAP, etc.) work over SMB too. **Shares that require SMB3 encryption are not supported yet.**
 
