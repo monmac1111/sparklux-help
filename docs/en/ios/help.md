@@ -42,7 +42,7 @@ MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit,
 
 The screen is split into left, middle and right thirds. What happens depends on where you tap.
 
-![Screen controls: left, middle and right thirds, and swipe down](../../assets/ios-gestures-en.svg)
+![Screen controls: left, middle and right thirds, swipe down, and pinch to zoom](../../assets/ios-gestures-en.svg)
 
 | Gesture | Action |
 |---|---|
@@ -51,9 +51,12 @@ The screen is split into left, middle and right thirds. What happens depends on 
 | Double-tap the left | Back 10 seconds (keep tapping for 20, 30…) |
 | Double-tap the right | Forward 10 seconds (keep tapping for 20, 30…) |
 | Touch and hold (anywhere) | 2× speed while you hold. Back to normal when you let go (while playing) |
-| Swipe down | Closes the player. Pull about a fifth of the screen, or flick quickly. If not far enough, it springs back (does not start on the controls or near the A/B divider) |
+| Pinch with two fingers | Zoom in / out (1× to 4×), centered between your fingers. Let go near 1× or near "fill the screen" (no black bars) and it snaps to that size |
+| Drag while zoomed | Moves the zoomed picture (it stops at the edges). While zoomed, swiping down does not close the player |
+| Double-tap with two fingers | Back to 1×. The zoom button in the controls (for example "2.3×") does the same |
+| Swipe down (at 1×) | Closes the player. Pull about a fifth of the screen, or flick quickly. If not far enough, it springs back (does not start on the controls or near the A/B divider) |
 
-The **controls** have a seek bar, back / forward 10 seconds, play / pause, ✨ (Picture) and × (close).
+The **controls** have a seek bar, back / forward 10 seconds, play / pause, ✨ (Picture) and × (close). While zoomed, a zoom button (tap for 1×) also appears. Upscaling and super resolution work on the part of the picture you see while zoomed.
 
 ## Picture settings
 
