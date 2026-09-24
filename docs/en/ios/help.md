@@ -46,7 +46,7 @@ The screen is split into left, middle and right thirds. What happens depends on 
 
 | Gesture | Action |
 |---|---|
-| Tap the middle | Play / pause. While paused, the controls stay on screen |
+| Tap the middle | When the controls are hidden: play / pause (while paused, the controls stay on screen). When the controls are shown: hides the controls only (no play / pause) |
 | Tap the left or right | Show / hide the controls |
 | Double-tap the left | Back 10 seconds (keep tapping for 20, 30…) |
 | Double-tap the right | Forward 10 seconds (keep tapping for 20, 30…) |
