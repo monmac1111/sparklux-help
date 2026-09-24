@@ -40,14 +40,14 @@ MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit,
 
 ## Controls while playing
 
-The screen is split into left, middle and right thirds. What happens depends on where you tap.
+A single tap anywhere shows or hides the controls. Double-taps depend on the side.
 
 ![Screen controls: left, middle and right thirds, swipe down, and pinch to zoom](../../assets/ios-gestures-en.svg)
 
 | Gesture | Action |
 |---|---|
-| Tap the middle | When the controls are hidden: play / pause (while paused, the controls stay on screen). When the controls are shown: hides the controls only (no play / pause) |
-| Tap the left or right | Show / hide the controls |
+| Tap (anywhere) | Show / hide the controls (does not play or pause) |
+| Large buttons in the center (while the controls are shown) | ⏮ Previous file / ▶︎ Play · ⏸ Pause / ⏭ Next file |
 | Double-tap the left | Back 10 seconds (keep tapping for 20, 30…) |
 | Double-tap the right | Forward 10 seconds (keep tapping for 20, 30…) |
 | Touch and hold (anywhere) | 2× speed while you hold. Back to normal when you let go (while playing) |
@@ -56,7 +56,9 @@ The screen is split into left, middle and right thirds. What happens depends on 
 | Double-tap with two fingers | Back to 1×. The zoom button in the controls (for example "2.3×") does the same |
 | Swipe down (at 1×) | Closes the player. Pull about a fifth of the screen, or flick quickly. If not far enough, it springs back (does not start on the controls or near the A/B divider) |
 
-The **controls** have a seek bar, back / forward 10 seconds, play / pause, ✨ (Picture) and × (close). While zoomed, a zoom button (tap for 1×) also appears. Upscaling and super resolution work on the part of the picture you see while zoomed.
+When the **controls** are shown, large **Previous File, Play / Pause and Next File** buttons appear in the center of the screen. Use them to play or pause. While paused, the controls stay on screen; while playing, they hide after a few seconds. Previous / Next File move to the neighboring video in the folder you opened, in the same order as the list (dimmed at the first or last file). Your position is remembered, so the video resumes where you left off next time. Photos, URLs and single files opened with **Open File** have no Previous / Next buttons.
+
+The bottom row has a seek bar, back / forward 10 seconds, ✨ (Picture) and × (close). While zoomed, a zoom button (tap for 1×) also appears. Upscaling and super resolution work on the part of the picture you see while zoomed.
 
 ## Picture settings
 
