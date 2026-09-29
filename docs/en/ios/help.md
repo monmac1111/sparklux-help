@@ -1,6 +1,6 @@
 # Help — Sparklux Go (iPhone / iPad)
 
-**SDR video, at HDR brightness.** Browse the folders on your Mac or NAS, or on WebDAV, Jellyfin, DLNA and SFTP servers, and play videos directly.
+**SDR video, at HDR brightness.** Browse the folders on your Mac or NAS, or on WebDAV, Jellyfin and DLNA servers, and play videos directly.
 
 ## Requirements
 
@@ -29,7 +29,6 @@ On the home screen, tap **Add Server** and choose a **Server Type**. Passwords a
 | WebDAV | Server URL, user name and password | `https://nas.local:5006` |
 | Jellyfin | Server address and your Jellyfin user name and password (videos play as the original files, no transcoding) | `192.168.1.10:8096` |
 | DLNA / UPnP | Media servers on the same Wi-Fi appear in the list automatically. If not, enter the address or the device description URL | `192.168.1.10:8200` |
-| SFTP | Host name, user name and password (port 22). The server's key is confirmed the first time you connect | `nas.local` |
 
 To remove a server, swipe it to the left on the home screen (long-press also offers Edit and Delete). When a connection fails, the reason is shown (name not found, timed out, wrong password and so on).
 
