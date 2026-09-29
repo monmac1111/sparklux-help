@@ -1,6 +1,6 @@
 # Help — Sparklux Go (iPhone / iPad)
 
-**SDR video, at HDR brightness.** Browse the folders on your Mac or NAS and play videos directly.
+**SDR video, at HDR brightness.** Browse the folders on your Mac or NAS, or on WebDAV, Jellyfin, DLNA and SFTP servers, and play videos directly.
 
 ## Requirements
 
@@ -19,6 +19,44 @@
 
 NAS devices (Synology, QNAP, etc.) work over SMB too. **Shares that require SMB3 encryption are not supported yet.**
 
+## Connect to other servers (version 1.1)
+
+On the home screen, tap **Add Server** and choose a **Server Type**. Passwords are stored only in this device's Keychain and are sent only to that server.
+
+| Type | What to enter | Example |
+|---|---|---|
+| SMB | File Sharing on a Mac or NAS (steps above) | `mymac.local` |
+| WebDAV | Server URL, user name and password | `https://nas.local:5006` |
+| Jellyfin | Server address and your Jellyfin user name and password (videos play as the original files, no transcoding) | `192.168.1.10:8096` |
+| DLNA / UPnP | Media servers on the same Wi-Fi appear in the list automatically. If not, enter the address or the device description URL | `192.168.1.10:8200` |
+| SFTP | Host name, user name and password (port 22). The server's key is confirmed the first time you connect | `nas.local` |
+
+To remove a server, swipe it to the left on the home screen (long-press also offers Edit and Delete). When a connection fails, the reason is shown (name not found, timed out, wrong password and so on).
+
+FTP, Plex, NFS and cloud storage are not supported (a Plex server may appear as a DLNA server).
+
+## Handy list features (version 1.1)
+
+- **Thumbnails**: folder lists show small previews of each video. Turn them off with **Thumbnails** in the ⇅ menu at the top right (to save network traffic or server load)
+- **Sort**: from the ⇅ menu — Name, Date, Size or **Unwatched First**. The order applies across the app
+- **Search**: type a name in the **Search this folder** field to filter the list
+- **Favorites**: long-press or swipe a video or folder and choose **Add to Favorites**, or tap ★ in the player. Favorites appear at the top of the home screen (greyed out when the server cannot be reached)
+- Finished videos are marked **Watched**; videos in progress show how far you got
+
+## Subtitles and audio (version 1.1)
+
+- **External subtitles**: put a subtitle file with the same name as the video **in the same folder**, and it is shown automatically. Besides `Movie.srt`, language-tagged names such as `Movie.en.srt` or `Movie.ja.srt` and `.ass` files work too (the one matching your device language is chosen)
+  - Example: `Holiday.mp4` and `Holiday.en.srt`
+- **Embedded subtitles**: subtitles inside MKV (SRT, ASS) and MP4 (tx3g) can be selected
+- In the ✨ (picture) sheet you can switch subtitles, change their size (small, medium, large) and position (bottom, a little higher, high), and switch **audio tracks**
+- ASS positioning, rotation and effects are ignored; subtitles are shown at the bottom centre
+
+## Picture in Picture (version 1.1)
+
+- Start it with the Picture in Picture button in the controls. It also starts automatically when you go to the Home Screen during playback (turn this off with **Picture in Picture on Leaving** in the ✨ sheet)
+- The PiP window shows HDR too, but **HDR highlights are more restrained due to iOS limits**. Frame interpolation is paused while in PiP
+- If you leave the app without PiP, playback pauses as before
+
 ## Other ways to open videos
 
 | Source | How |
@@ -35,7 +73,7 @@ NAS devices (Synology, QNAP, etc.) work over SMB too. **Shares that require SMB3
 
 MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit, HDR10, HLG and Dolby Vision 8.1).
 
-- For MKV, only the default audio track plays. MKV embedded subtitles are planned for a future update
+- To switch subtitles or audio tracks, see "Subtitles and audio"
 - Dolby Vision Profile 5 cannot be shown in correct colours (the app tells you so)
 
 ## Controls while playing
