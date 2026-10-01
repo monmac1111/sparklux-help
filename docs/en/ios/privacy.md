@@ -1,6 +1,6 @@
 # Privacy Policy — Sparklux Go (iPhone / iPad)
 
-**Last updated: 2026-09-23**
+**Last updated: 2026-10-01**
 
 This policy describes how Sparklux Go for iPhone / iPad ("the app") handles information.
 
@@ -24,11 +24,14 @@ The following stays **on your iPhone / iPad only** and is never sent anywhere.
 | Information | Where | Why |
 |---|---|---|
 | Servers you add (name, host name, user name, last share and folder) | App storage on the device | To reconnect quickly |
-| Server **passwords** | **The device keychain** (this device only; not synced to iCloud Keychain) | To reconnect quickly. You can choose not to save it |
+| **Passwords** for SMB and WebDAV | **The device keychain** (this device only; not synced to iCloud Keychain) | To reconnect quickly. You can choose not to save it |
+| Jellyfin **sign-in token** (no password is stored) | **The device keychain** (this device only) | To reconnect quickly |
 | References to folders you add from the Files app | App storage on the device | To reopen the same folder |
-| Resume positions (up to 200) | App storage on the device | To continue where you left off |
-| Picture settings (preset, upscaling, frame interpolation) | App storage on the device | To keep your settings |
-| Temporary copies of videos chosen from Photos (up to 5) | Device cache | To play them (the system may remove them) |
+| Resume positions and watched marks (up to 1000 combined) | App storage on the device | To resume playback and show what you've watched |
+| Favorites | App storage on the device | To show them on the home screen |
+| Thumbnails (small previews of videos) | Device cache | To show them quickly in lists |
+| Subtitle, Picture in Picture, sort and display settings | App storage on the device | To keep your settings |
+| Temporary copies of videos chosen from Photos (up to 20, 10GB total) | App storage on the device (excluded from backups; the oldest are removed automatically) | To play them |
 
 This is removed when you delete the app (keychain items may remain, as the system decides).
 
@@ -36,12 +39,13 @@ This is removed when you delete the app (keychain items may remain, as the syste
 
 The app reads **only the video you choose**. It does not ask for access to your whole photo library.
 
-## 4. Local network
+## 4. Scope of network traffic
 
-The app uses local network access to find and open shared folders on Macs and NAS devices on the same Wi-Fi.
+The app connects only to **servers you register yourself** (SMB, WebDAV, Jellyfin, DLNA/UPnP) and to **URLs you type in**. It never sends anything to a server run by the developer.
 
-- It connects **only to servers you pick or type in**
-- File sharing (SMB) traffic is not encrypted; the app is meant for home networks
+- You can connect not only to servers on your home network but also to servers outside it, over HTTPS (WebDAV, Jellyfin, URLs)
+- Unencrypted traffic: SMB (when you connect to a server that does not require encryption), http WebDAV/Jellyfin/DLNA-UPnP, and http URLs. These only mean the traffic itself is not encrypted — the destination is still the one you chose
+- Local network access is used to find these servers on the same Wi-Fi
 
 ## 5. Purchases
 
@@ -57,7 +61,7 @@ The app connects only in these cases.
 
 | Traffic | What | To |
 |---|---|---|
-| Opening a shared folder / playing | Sign-in and reading the video | The server you chose (on your network) |
+| Opening a shared folder / playing | Sign-in and reading the video | The server you registered (SMB, WebDAV, Jellyfin, DLNA/UPnP) |
 | Opening a URL | A request to the URL you entered | Where you pointed it |
 | Purchase, trial, restore | Processing and verifying the transaction | Apple |
 
