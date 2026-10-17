@@ -1,6 +1,6 @@
 # Privacy Policy — Sparklux Go (iPhone / iPad)
 
-**Last updated: 2026-10-01**
+**Last updated: 2026-10-18**
 
 This policy describes how Sparklux Go for iPhone / iPad ("the app") handles information.
 
@@ -30,6 +30,8 @@ The following stays **on your iPhone / iPad only** and is never sent anywhere.
 | Resume positions and watched marks (up to 1000 combined) | App storage on the device | To resume playback and show what you've watched |
 | Favorites | App storage on the device | To show them on the home screen |
 | Thumbnails (small previews of videos) | Device cache | To show them quickly in lists |
+| Imported LUT (.cube) files and your choice | App storage on the device | To apply them to the picture. Only a copy of the file you chose; nothing is written to its original location |
+| Counts used for the rating request (videos watched to the end, first-launch date, date of the last request) | App storage on the device | To decide when to show the App Store rating request. Never sent anywhere |
 | Subtitle, Picture in Picture, sort and display settings | App storage on the device | To keep your settings |
 | Temporary copies of videos chosen from Photos (up to 20, 10GB total) | App storage on the device (excluded from backups; the oldest are removed automatically) | To play them |
 

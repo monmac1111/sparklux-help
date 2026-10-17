@@ -70,10 +70,13 @@ FTP, Plex and NFS are not supported (a Plex server may appear as a DLNA server).
 
 ## Supported formats
 
-MP4 / MOV / M4V / HLS (.m3u8) / **MKV**. H.264 and HEVC video (including 10-bit, HDR10, HLG and Dolby Vision 8.1).
+MP4 / MOV / M4V / HLS (.m3u8) / **MKV** / **AVI** (version 1.3). H.264 and HEVC video (including 10-bit, HDR10, HLG and Dolby Vision 8.1).
 
 - To switch subtitles or audio tracks, see "Subtitles and audio"
 - Dolby Vision Profile 5 cannot be shown in correct colours (the app tells you so)
+- **AVI**: plays H.264, MJPEG and MPEG-4 (Simple Profile) video with MP3, AC-3 and PCM audio. Formats the app cannot open — WMV, and many Xvid / DivX files — are refused up front with a reason (convert to MP4 or MKV). An AVI without an index plays from the start and cannot be seeked
+- **Portrait MKV**: MKV files that carry a rotation are shown the right way up
+- **Audio that cannot be played**: DTS, DTS-HD, TrueHD and similar cannot be decoded on iPhone / iPad. The app switches automatically to a playable audio track (same language first) and tells you. If there is none, it plays the picture only and says "This video's audio (DTS) cannot be played" — it never goes silent without saying so
 
 ## Controls while playing
 
@@ -87,7 +90,7 @@ A single tap anywhere shows or hides the controls. Double-taps depend on the sid
 | Large buttons in the center (while the controls are shown) | ⏮ Previous file / ▶︎ Play · ⏸ Pause / ⏭ Next file |
 | Double-tap the left | Back 10 seconds (keep tapping for 20, 30…) |
 | Double-tap the right | Forward 10 seconds (keep tapping for 20, 30…) |
-| Touch and hold (anywhere) | 2× speed while you hold. Back to normal when you let go (while playing) |
+| Touch and hold (anywhere) | 2× speed while you hold. Returns to the speed you had chosen when you let go (while playing) |
 | Pinch with two fingers | Zoom in / out (1× to 4×), centered between your fingers. Let go near 1× or near "fill the screen" (no black bars) and it snaps to that size |
 | Drag while zoomed | Moves the zoomed picture (it stops at the edges). While zoomed, swiping down does not close the player |
 | Double-tap with two fingers | Back to 1×. The zoom button in the controls (for example "2.3×") does the same |
@@ -95,7 +98,32 @@ A single tap anywhere shows or hides the controls. Double-taps depend on the sid
 
 When the **controls** are shown, large **Previous File, Play / Pause and Next File** buttons appear in the center of the screen. Use them to play or pause. While paused, the controls stay on screen; while playing, they hide after a few seconds. Previous / Next File move to the neighboring video in the folder you opened, in the same order as the list (dimmed at the first or last file). Your position is remembered, so the video resumes where you left off next time. Photos, URLs, single files opened with **Open File**, and videos opened from Recent or Favorites have no Previous / Next buttons.
 
-The top row has × (close); while zoomed, a zoom button (tap for 1×) appears there too. The bottom row has a seek bar, back / forward 10 seconds, ★ (favorite, only when you opened a video), Picture in Picture and ✨ (Picture). Upscaling and super resolution work on the part of the picture you see while zoomed.
+The top row has × (close); while zoomed, a zoom button (tap for 1×) appears there too. The bottom row has a seek bar, back / forward 10 seconds, the speed menu, A–B, ★ (favorite, only when you opened a video), Picture in Picture and ✨ (Picture). On iPhone the top row also has the rotation lock button. Upscaling and super resolution work on the part of the picture you see while zoomed.
+
+## Playback tools (version 1.3)
+
+- **Playback speed**: choose 0.5, 0.75, 1, 1.25, 1.5 or 2× from the speed menu in the bottom row. At anything other than 1× the button shows the speed in amber. Speed is per video; the next video starts at 1×. After a touch-and-hold 2×, it returns to the speed you **chose**. Pitch is preserved
+- **Rotation lock** (iPhone only): the button in the top row locks the current orientation (landscape works either way up). It applies only while the player is open and is released when you quit the app. iPad does not show the button
+- **A–B section loop**: use "A–B" in the bottom row to set a start (A) and an end (B), and that section repeats. Seeking outside the section, or changing video, clears it. Setting B before A swaps them; a section shorter than 0.5 s is widened to 0.5 s. Not available for AVI files that cannot be seeked
+- **Loop**: you can also repeat a single video (version 1.2.1)
+
+## Your own LUTs (.cube, version 1.3)
+
+In ✨ (Picture), tap "Import LUT (.cube)…" to bring in your own .cube files (from Files, SMB, iCloud and so on, or via "Open in" from the share sheet). The file is checked when imported, and a broken one is refused with a reason.
+
+- Choosing a LUT turns off the SDR-to-HDR brightness expansion and clears the preset (choosing a preset clears the LUT). A/B compare still works
+- Whether the output is SDR (Rec.709) or HDR (HLG / PQ) is guessed from the file name; touch and hold the LUT to correct it
+- **LUTs are not applied to HDR videos** (the app tells you)
+- The LUT you chose is remembered after you quit
+
+## Anime upscaling (version 1.4)
+
+In the Picture settings, **Upscaling method** offers **Standard**, **Anime super resolution** and **Anime (light)**. They work **only when you choose them** (Standard is the default).
+
+- **Anime super resolution**: makes lines and flat colours crisper at a larger size. The trained models are built into the app and run only on your device (nothing is sent). It applies to 8-bit videos; for 10-bit and HDR videos the app says it is unavailable
+- **Anime (light)**: a lightweight method (Anime4K) that enlarges 2×, with little battery or heat cost
+- The level used is **measured on your device** (you will see "Measuring" at first), and it never enlarges beyond what fits the screen. When the device gets warm, or in Low Power Mode, it lowers the level or stops, and tells you why
+- Together with frame interpolation, if it cannot keep up, interpolation is lowered one step so picture quality comes first
 
 ## Picture settings
 
@@ -108,6 +136,8 @@ Tap ✨ to open the picture settings.
 | Brighter, as is | Same contrast, lifted to the screen's full brightness |
 | No conversion | Shows the source as it is |
 | A/B compare | Left: current preset, right: no conversion. Drag the divider |
+| Upscaling method | Standard, Anime super resolution, Anime (light) (see "Anime upscaling" above) |
+| LUT | Import and choose a .cube (see "Your own LUTs" above) |
 | Upscale to screen resolution | When the video is smaller than the screen, scales it to the screen's native resolution |
 | Frame interpolation | Smooths motion. On by default (you can turn it off in the Picture settings). When active, the output frame rate appears on screen, e.g. "Smooth 120fps". If unavailable, the reason is shown |
 | Interpolation priority | Choose Resolution priority (default), Smooth priority or Ultra smooth priority (see below) |
@@ -128,6 +158,15 @@ When the device gets hot or can't keep up, the app first lowers the frame rate o
 
 **Experiment**: on devices whose screen's maximum refresh rate is 120 Hz, turning on "Try 1080p at 120fps" forces 1080p at 120 fps regardless of budget (it turns off automatically if the device gets hot). It only appears on 120 Hz screens.
 
+## iPhone Duo (version 1.4.1)
+
+On iPhone Duo, the screen follows the fold.
+
+- **Half-open** (set down like a laptop): the video plays in the top half, and the **bottom half is the app's browser**, so you can pick the next video right there. The video never crosses the fold. The top half works like the usual player (controls, center buttons, A–B and so on)
+- **Split / Full screen**: a button in the top row switches between them (shown only in postures that can be split). Your choice is remembered per posture. A flat, fully open portrait screen can be split too (full screen is the default there)
+- With a vertical fold (held like a book), closed, or flat in landscape, the video simply plays full screen
+- **On the closed outer screen in landscape**, the controls are centered symmetrically instead of leaning away from the camera side
+
 ## Free trial and purchase
 
 - On first launch you will see the **3-day** free trial. Tap **Start Free Trial** to begin
@@ -145,6 +184,8 @@ When the device gets hot or can't keep up, the app first lowers the frame rate o
 | "Could not get the file. Check the network, or open the storage app (such as Google Drive) and make the file available." | Check the network, or open the cloud storage app and make sure the file is downloaded there |
 | Playback stopped and **Try Again** appeared | The connection dropped. **Try Again** reopens from the same position |
 | "This video needs more than the network provides…" | The video's data rate exceeds your Wi-Fi speed. Move closer to the router, or serve from a wired Mac |
+| No sound (DTS etc.) | That audio cannot be played on iPhone / iPad. If another audio track exists the app switches to it automatically; otherwise it says "This video's audio (DTS) cannot be played". Converting the audio to AAC or similar makes it play |
+| "WMV files cannot be played", or an AVI will not open | The contents (WMV, Xvid, DivX, etc.) are not supported. Convert to MP4 or MKV |
 | The picture does not get brighter | At maximum brightness some devices leave no HDR headroom. Lower it slightly |
 
 ## Contact
