@@ -23,10 +23,12 @@ nav:
       - ヘルプ（Mac）: ja/help.md
       - プライバシーポリシー（Mac）: ja/privacy.md
       - ヘルプ（Sparklux Go）: ja/ios/help.md
+      - Synology での設定（Sparklux Go）: ja/ios/synology.md
       - プライバシーポリシー（Sparklux Go）: ja/ios/privacy.md
   - English:
       - Help (Mac): en/help.md
       - Privacy Policy (Mac): en/privacy.md
       - Help (Sparklux Go): en/ios/help.md
+      - Synology setup (Sparklux Go): en/ios/synology.md
       - Privacy Policy (Sparklux Go): en/ios/privacy.md
 markdown_extensions: [admonition, tables, attr_list]
