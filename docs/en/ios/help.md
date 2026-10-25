@@ -66,6 +66,9 @@ It normally works on the same Wi-Fi. There are two ways to use it while you are 
 - **External subtitles**: put a subtitle file with the same name as the video **in the same folder**, and it is shown automatically. Besides `Movie.srt`, language-tagged names such as `Movie.en.srt` or `Movie.ja.srt` and `.ass` files work too (the one matching your device language is chosen). This only applies when you open the video from a folder listing (SMB, WebDAV, a Files app folder and so on) — **Jellyfin cannot read subtitle files**. It may not appear when you open from Recent or Favorites
   - Example: `Holiday.mp4` and `Holiday.en.srt`
 - **Embedded subtitles**: subtitles inside MKV (SRT, ASS) and MP4 (tx3g) can be selected
+- **Image subtitles** (coming in the next version): picture-based subtitles in MKV files made from DVDs or Blu-ray discs (VobSub, PGS) can be selected too. They appear in the subtitle list as, for example, "Japanese · Image"
+  - Image subtitles are scaled to fit the video picture. **The subtitle size and position settings do not apply to them**
+  - While you pinch to zoom, or in Picture in Picture, image subtitles may appear in the wrong place or not at all
 - In the ✨ (Picture) sheet you can switch subtitles, change their size (Small, Medium, Large) and position (Bottom, Slightly Raised, Higher), and switch **audio tracks**
 - ASS positioning, rotation and effects are ignored; subtitles are shown at the bottom centre
 
