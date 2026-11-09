@@ -34,24 +34,30 @@ To remove a server, swipe it to the left on the home screen (long-press also off
 
 FTP, Plex and NFS are not supported (a Plex server may appear as a DLNA server). There is no feature to connect directly to a cloud storage account. You can open iCloud Drive, Google Drive and similar services through the Files app (the whole file downloads before opening).
 
-## View Sparklux Library on your Mac
+## View Sparklux Library on your computer
 
-Install **Sparklux Library** from the Mac App Store on your Mac to browse and play its libraries on this iPhone or iPad over the same Wi-Fi. You don’t need to copy any videos to this device.
+Install **Sparklux Library** on your Mac or Windows PC to browse and play its libraries on this iPhone or iPad over the same Wi-Fi. You don’t need to copy any videos to this device.
 
-1. On the Mac: in Sparklux Library, choose “iPhone & iPad…” from the menu, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
-2. On this device: on Home, tap Add Server → “Add Sparklux Library on Mac” and scan the QR code
-3. The libraries appear. You can filter by tags and play videos. Playback positions stay in sync with the Mac
+- Mac: available on the Mac App Store
+- Windows: available on the [Microsoft Store](https://apps.microsoft.com/detail/9NNRLZS3648S)
+
+1. On the computer:
+   - Mac: in Sparklux Library, choose “iPhone & iPad…” from the menu, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
+   - Windows: in Sparklux Library’s settings, open “iPhone/iPad”, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
+2. On this device: on Home, tap Add Server → “Add Sparklux Library on Mac” and scan the QR code (use the same button for Windows)
+3. The libraries appear. You can filter by tags and play videos. Playback positions stay in sync with the computer
 
 - Only devices you paired with the QR code can connect. The connection is encrypted with the paired devices’ keys
 - A library with a password shows nothing until you enter the password (Face ID can remember it). Its contents are not kept on this device
-- If the Mac is asleep, it may not be reachable
+- If the computer is asleep, it may not be reachable
+- Windows: to keep it reachable after you close the window, turn on “Keep running in the notification area when the window is closed” in settings. If this device can’t find the PC, check that the Windows network is set to Private and that the app is allowed through the firewall (the Sparklux Library settings also show the reason)
 
 ### Use it away from home
 
 It normally works on the same Wi-Fi. There are two ways to use it while you are away.
 
-- **Use a VPN (such as Tailscale)**: install a VPN such as Tailscale on both the Mac and this device and join them to the same network, and you can reach the Mac from anywhere. No router settings are needed. Connect once on your home Wi-Fi first (that is when the app learns the Mac’s address inside the VPN). Tailscale is a third-party service and is not part of this app
-- **Ask your router (experimental)**: on the Mac, under Experimental in the iPhone & iPad window, turn on “Allow access from outside your home”. The Mac asks your router to let connections in (off by default). Whether it works depends on your connection
+- **Use a VPN (such as Tailscale)**: install a VPN such as Tailscale on both the computer and this device and join them to the same network, and you can reach the computer from anywhere. No router settings are needed. Connect once on your home Wi-Fi first (that is when the app learns the computer’s address inside the VPN). Tailscale is a third-party service and is not part of this app
+- **Ask your router (experimental, Mac only)**: on the Mac, under Experimental in the iPhone & iPad window, turn on “Allow access from outside your home”. The Mac asks your router to let connections in (off by default). Whether it works depends on your connection
 
 ## Handy list features (version 1.1)
 
