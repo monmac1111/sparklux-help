@@ -41,14 +41,20 @@ Install **Sparklux Library** on your Mac or Windows PC to browse and play its li
 - Mac: available on the Mac App Store
 - Windows: available on the [Microsoft Store](https://apps.microsoft.com/detail/9NNRLZS3648S)
 
+To connect:
+
 1. On the computer:
-   - Mac: in Sparklux Library, choose “iPhone & iPad…” from the menu, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
-   - Windows: in Sparklux Library’s settings, open “iPhone/iPad”, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
-2. On this device: on Home, tap Add Server → “Add Sparklux Library on Mac” and scan the QR code (use the same button for Windows)
+    - Mac: in Sparklux Library, choose “iPhone & iPad…” from the menu, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
+    - Windows: in Sparklux Library’s settings, open “iPhone/iPad”, turn on “Let iPhone and iPad use this library”, and click “Add Device…” to show a QR code
+2. On this device: on Home, tap “Add Sparklux Library” (the row just below Add Server) and scan the QR code. It is the same row for Mac and Windows. If scanning fails (you were on a different Wi-Fi, or the QR code expired), point the camera away and then at the code again (from version 1.5.6; on earlier versions, close the Add screen and open it again)
 3. The libraries appear. You can filter by tags and play videos. Playback positions stay in sync with the computer
 
+Good to know:
+
 - Only devices you paired with the QR code can connect. The connection is encrypted with the paired devices’ keys
-- A library with a password shows nothing until you enter the password (Face ID can remember it). Its contents are not kept on this device
+- A library with a password shows nothing until you enter the password. Its contents are not kept on this device
+    - Mac version: turn on “Remember with Face ID” and you can open it with Face ID next time
+    - Windows version: it can't remember devices yet, so you enter the password each time you open it. It stays open while the app is in the foreground (it closes when the app goes to the background)
 - If the computer is asleep, it may not be reachable
 - Windows: to keep it reachable after you close the window, turn on “Keep running in the notification area when the window is closed” in settings. If this device can’t find the PC, check that the Windows network is set to Private and that the app is allowed through the firewall (the Sparklux Library settings also show the reason)
 
@@ -72,7 +78,7 @@ It normally works on the same Wi-Fi. There are two ways to use it while you are 
 - **External subtitles**: put a subtitle file with the same name as the video **in the same folder**, and it is shown automatically. Besides `Movie.srt`, language-tagged names such as `Movie.en.srt` or `Movie.ja.srt` and `.ass` files work too (the one matching your device language is chosen). This only applies when you open the video from a folder listing (SMB, WebDAV, a Files app folder and so on) — **Jellyfin cannot read subtitle files**. It may not appear when you open from Recent or Favorites
   - Example: `Holiday.mp4` and `Holiday.en.srt`
 - **Embedded subtitles**: subtitles inside MKV (SRT, ASS) and MP4 (tx3g) can be selected
-- **Image subtitles** (coming in the next version): picture-based subtitles in MKV files made from DVDs or Blu-ray discs (VobSub, PGS) can be selected too. They appear in the subtitle list as, for example, "Japanese · Image"
+- **Image subtitles** (from version 1.5): picture-based subtitles in MKV files made from DVDs or Blu-ray discs (VobSub, PGS) can be selected too. They appear in the subtitle list as, for example, "Japanese · Image"
   - Image subtitles are scaled to fit the video picture. **The subtitle size and position settings do not apply to them**
   - While you pinch to zoom, or in Picture in Picture, image subtitles may appear in the wrong place or not at all
 - In the ✨ (Picture) sheet you can switch subtitles, change their size (Small, Medium, Large) and position (Bottom, Slightly Raised, Higher), and switch **audio tracks**
@@ -134,6 +140,7 @@ The top row has × (close); while zoomed, a zoom button (tap for 1×) appears th
 - **Rotation lock** (iPhone only): the button in the top row locks the current orientation (landscape works either way up). It applies only while the player is open and is released when you quit the app. iPad does not show the button
 - **A–B section loop**: use "A–B" in the bottom row to set a start (A) and an end (B), and that section repeats. Seeking outside the section, or changing video, clears it. Setting B before A swaps them; a section shorter than 0.5 s is widened to 0.5 s. Not available for AVI files that cannot be seeked
 - **Loop**: you can also repeat a single video (version 1.2.1)
+- **Next video** (from version 1.5.6): when a video plays to the end, the next one in the same folder plays automatically. If there is no next video, playback stops. Loop and A-B loop take priority when they are on. It does not advance while you are using another app with Picture in Picture
 
 ## Your own LUTs (.cube, version 1.3)
 
